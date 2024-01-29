@@ -9,20 +9,20 @@ createApp({
 data() {
     return {
     todos:[
-        // {
-        //     text:'portare fuori il cane',
-        //     done: false,
-        // },
+         {
+             text:'portare fuori il cane',
+             done: false,
+         },
 
-        // {
-        //     text:'lavare i piatti',
-        //     done: false,
-        // },
+         {
+             text:'lavare i piatti',
+             done: false,
+         },
 
-        // {
-        //     text:'fare la spesa',
-        //     done: false,
-        // },
+         {
+             text:'fare la spesa',
+             done: false,
+         },
     ]
     }
 
@@ -33,12 +33,13 @@ data() {
 methods:{
     //funzione per aggiungere il text del input al nostro array
     addToDo(){
-        this.todos.push({
-            text: this.nuovoTodo,
-            done: false,
-        })
-
-        this.nuovoTodo = ''
+        if (this.nuovoTodo.trim() !== '') {
+            this.todos.push({
+                text: this.nuovoTodo,
+                done: false,
+            });
+            this.nuovoTodo = '';
+        }
     },
 
     //funzione per rimuovere il todo
