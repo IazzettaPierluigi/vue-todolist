@@ -31,7 +31,13 @@ data() {
 },
 
 methods:{
-
+    //funzione per aggiungere il text del input al nostro array
+    addToDo(){
+        this.todos.push({
+            text: this.nuovoTodo,
+            done: false,
+        })
+    }
 }
 
 }).mount('#app')

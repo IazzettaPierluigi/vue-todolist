@@ -22,7 +22,7 @@
                 <div class="col-7">
                     <input type="text" placeholder="Inserisci una nuova attività" class="w-100" v-model="nuovoTodo" >
                 </div>
-                <div class="col-2"><div class="btn btn-primary ">Aggiungi</div></div>
+                <div class="col-2"><div class="btn btn-primary" @click="addToDo">Aggiungi</div></div>
 
                 <div class="col-9 bg-secondary text-black mt-2 align-items-center d-flex flex-column ">
                     <ul class="list-group w-50 " v-if="todos.length > 0">
