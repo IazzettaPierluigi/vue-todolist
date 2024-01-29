@@ -13,7 +13,27 @@
 </head>
 <body>
     <div id="app">
-        
+        <div class="container">
+            <div class="row align-items-baseline justify-content-center">
+                <h1 class="text-center">to do list</h1>
+                <div class="col-7">
+                    <input type="text" placeholder="Inserisci una nuova attività" class="w-100 " >
+                </div>
+                <div class="col-2"><div class="btn btn-primary ">Aggiungi</div></div>
+
+                <div class="col-9 bg-secondary text-black">
+                    <ul class="list-group " v-if="todos.length > 0">
+                        <li class="list-group-item d-flex justify-content-between"
+                         v-for="(todo, index) in todos" :key="index">
+                        <p>{{ todo.text }}</p>
+                        </li>
+                    </ul>
+
+                    <p v-else>No todos available</p>
+                </div>
+
+            </div>
+        </div>
     </div>
 
 

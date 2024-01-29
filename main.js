@@ -8,7 +8,22 @@ const { createApp } = Vue
 createApp({
 data() {
     return {
-    
+    todos:[
+        {
+            text:'portare fuori il cane',
+            done: false,
+        },
+
+        {
+            text:'lavare i piatti',
+            done: false,
+        },
+
+        {
+            text:'fare la spesa',
+            done: false,
+        },
+    ]
     }
 },
 
