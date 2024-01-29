@@ -47,8 +47,8 @@ methods:{
     },
 
     //funzione per segnare il completamento del task
-    doneTask(){
-        done = true
+    doneTask(index) {
+        this.todos[index].done = !this.todos[index].done;
     }
 
 

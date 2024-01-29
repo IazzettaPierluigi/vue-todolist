@@ -27,8 +27,9 @@
                 <div class="col-9 bg-secondary text-black mt-2 align-items-center d-flex flex-column ">
                     <ul class="list-group w-50 " v-if="todos.length > 0">
                         <li class="list-group-item d-flex justify-content-between align-items-center "
-                         v-for="(todo, index) in todos" :key="index">
-                        <span class="" @click="doneTask">{{ todo.text }}</span>
+                         v-for="(todo, index) in todos" 
+                         :key="index">
+                        <span :class="{'text-decoration-line-through': todo.done }" @click="doneTask(index)">{{ todo.text }}</span>
                         <i class="fa-solid fa-x text-danger" @click="removeToDo(index)"></i>
                         </li>
                     </ul>
