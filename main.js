@@ -37,6 +37,11 @@ methods:{
             text: this.nuovoTodo,
             done: false,
         })
+    },
+
+    //funzione per rimuovere il todo
+    removeToDo(index){
+        this.todos.splice(index, 1)
     }
 }
 
