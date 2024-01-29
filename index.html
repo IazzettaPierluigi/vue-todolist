@@ -28,7 +28,7 @@
                     <ul class="list-group w-50 " v-if="todos.length > 0">
                         <li class="list-group-item d-flex justify-content-between align-items-center "
                          v-for="(todo, index) in todos" :key="index">
-                        <span class="">{{ todo.text }}</span>
+                        <span class="" @click="doneTask">{{ todo.text }}</span>
                         <i class="fa-solid fa-x text-danger" @click="removeToDo(index)"></i>
                         </li>
                     </ul>

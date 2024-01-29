@@ -37,12 +37,21 @@ methods:{
             text: this.nuovoTodo,
             done: false,
         })
+
+        this.nuovoTodo = ''
     },
 
     //funzione per rimuovere il todo
     removeToDo(index){
         this.todos.splice(index, 1)
+    },
+
+    //funzione per segnare il completamento del task
+    doneTask(){
+        done = true
     }
+
+
 }
 
 }).mount('#app')
